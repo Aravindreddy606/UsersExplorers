@@ -1,97 +1,90 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+📱 Users Explorer App
 
-# Getting Started
+A simple, production-style mobile application built using React Native CLI and TypeScript, demonstrating real-world app architecture and performance considerations.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+🚀 App Functionality
 
-## Step 1: Start Metro
+Home Screen
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+Entry screen with a button to navigate to users list
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Users Screen
 
-```sh
-# Using npm
-npm start
+Loads a large list of users from a public API (randomuser.me)
 
-# OR using Yarn
-yarn start
-```
+Search functionality (by name, email, city)
 
-## Step 2: Build and run your app
+Infinite scrolling / pagination
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Smooth list performance using FlatList
 
-### Android
+User Details Screen
 
-```sh
-# Using npm
-npm run android
+Displays detailed information about the selected user
 
-# OR using Yarn
-yarn android
-```
+Offline Support
 
-### iOS
+User data is stored locally using AsyncStorage
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+Data is restored after app restart (killed state)
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+🛠 Tech Stack
 
-```sh
-bundle install
-```
+React Native (CLI)
 
-Then, and every time you update your native dependencies, run:
+TypeScript
 
-```sh
-bundle exec pod install
-```
+Redux Toolkit (state management)
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+React Navigation (native stack)
 
-```sh
-# Using npm
-npm run ios
+AsyncStorage (local persistence)
 
-# OR using Yarn
-yarn ios
-```
+Functional components with React Hooks
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+No third-party UI libraries (only React Native components)
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+▶️ How to Run the Project
+1️⃣ Install dependencies
+npm install
 
-## Step 3: Modify your app
+2️⃣ Start Metro bundler
+npx react-native start
 
-Now that you have successfully run the app, let's make changes!
+3️⃣ Run on Android
+npx react-native run-android
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+4️⃣ Run on iOS (macOS only)
+npx react-native run-ios
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+🧠 Key Technical Decisions
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+Redux Toolkit for predictable and scalable state management
 
-## Congratulations! :tada:
+AsyncStorage to persist API data and handle app lifecycle scenarios
 
-You've successfully run and modified your React Native App. :partying_face:
+Local search filtering for better performance (no repeated API calls)
 
-### Now what?
+Infinite scrolling to handle large datasets efficiently
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+TypeScript for better type safety and maintainability
 
-# Troubleshooting
+Clean folder structure to support scalability
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+🔧 Improvements With More Time
 
-# Learn More
+Add unit tests for Redux reducers and async actions
 
-To learn more about React Native, take a look at the following resources:
+Implement pull-to-refresh
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Add better error retry handling
+
+Improve accessibility (screen reader support)
+
+Introduce caching strategies for API pagination
+
+Add animations for screen transitions
+
+✅ Summary
+
+This app focuses on clean architecture, performance, and real-world usage scenarios rather than UI polish, making it a strong demonstration of production-ready React Native development.
